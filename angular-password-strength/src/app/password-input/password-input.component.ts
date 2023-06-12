@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./password-input.component.css']
 })
 export class PasswordInputComponent {
-
+  password: string = '';
 }
