@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-password-input',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class PasswordInputComponent {
   password: string = '';
+  @Output() passwordChange: EventEmitter<string> = new EventEmitter<string>();
+
+  onPasswordChange(): void {
+    this.passwordChange.emit(this.password);
+  }
 }

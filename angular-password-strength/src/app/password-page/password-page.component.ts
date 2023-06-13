@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./password-page.component.css']
 })
 export class PasswordPageComponent {
+  password: string = '';
 
+  onPasswordChange(password: string): void {
+    this.password = password;
+  }
 }

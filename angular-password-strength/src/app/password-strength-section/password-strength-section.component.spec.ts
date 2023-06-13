@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PasswordStrengthSectionComponent } from './password-strength-section.component';
 
 describe('PasswordStrengthSectionComponent', () => {
