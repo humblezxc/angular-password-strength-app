@@ -8,29 +8,25 @@ import { Component, Input } from '@angular/core';
 export class PasswordStrengthSectionComponent {
   @Input() password!: string;
 
-  calculateStrength(): string {
-    console.log(this.password)
+  calculateStrength(sectionNumber: number): string {
     if (!this.password) {
-      return 'easy';
+      return 'gray';
     } else if (this.password.length < 8) {
-      return 'easy';
+      return  'red';
     } else if (
       /[a-zA-Z]/.test(this.password) &&
       /[0-9]/.test(this.password) &&
       /[!@#$%^&*]/.test(this.password)
     ) {
-      return 'strong';
+      return 'green';
     } else if (
-      /[a-zA-Z]/.test(this.password) &&
-      /[0-9]/.test(this.password) ||
-      /[a-zA-Z]/.test(this.password) &&
-      /[!@#$%^&*]/.test(this.password) ||
-      /[0-9]/.test(this.password) &&
-      /[!@#$%^&*]/.test(this.password)
+      (/[a-zA-Z]/.test(this.password) && /[0-9]/.test(this.password)) ||
+      (/[a-zA-Z]/.test(this.password) && /[!@#$%^&*]/.test(this.password)) ||
+      (/[0-9]/.test(this.password) && /[!@#$%^&*]/.test(this.password))
     ) {
-      return 'medium';
+      return sectionNumber <= 2 ? 'yellow' : 'gray';
     } else {
-      return 'easy';
+      return sectionNumber === 1 ? 'red' : 'gray';
     }
   }
 }
