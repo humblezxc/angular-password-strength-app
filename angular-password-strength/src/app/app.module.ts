@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { PasswordStrengthSectionComponent } from './password-strength-section/password-strength-section.component';
 import { PasswordInputComponent } from './password-input/password-input.component';
 import { FormsModule } from '@angular/forms';
+import { PasswordPageComponent } from './password-page/password-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PasswordStrengthSectionComponent,
-    PasswordInputComponent
+    PasswordInputComponent,
+    PasswordPageComponent
   ],
   imports: [
     BrowserModule,

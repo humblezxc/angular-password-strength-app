@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PasswordInputComponent } from './password-input/password-input.component';
+import { PasswordPageComponent } from './password-page/password-page.component';
 
 const routes: Routes = [
-  { path: '', component: PasswordInputComponent }
+  { path: '', component: PasswordPageComponent }
 ];
 
 @NgModule({
